@@ -76,6 +76,7 @@ public class MenuActivity extends AppCompatActivity {
         //Check Notification
         //*******************************************
 
+
         //Find ID login
         Log.d("9decV1", "idLogin ==> " + loginStrings[0]);
 
@@ -157,6 +158,7 @@ public class MenuActivity extends AppCompatActivity {
     private void myNotification() {
 
         try {
+
 
             SynMediciene synMediciene = new SynMediciene(MenuActivity.this, loginStrings[0]);
             synMediciene.execute();
