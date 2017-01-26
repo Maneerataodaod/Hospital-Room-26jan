@@ -215,34 +215,60 @@ public class MenuActivity extends AppCompatActivity {
 
             int[] intTimeAlert = new int[]{8,12,18,20};
 
-            for (int i1= 0;i1<intTimeAlert.length;i1++) {   // จะวนสี่รอบ
+
 
                 for (int i = 0; i < MyDateStrings.length; i++) {
 
-                    Date date = new Date(Integer.parseInt(yearStartStrings[i]),
-                            Integer.parseInt(monthStartStrings[i]) - 1,
-                            Integer.parseInt(dayStartStrings[i]), intTimeAlert[i1], 0, 0);
+                    ArrayList<Integer> arrayList = new ArrayList<>();
 
-                    if (myCurrentDate.before(date) && b) {
-                        b = false;
-                        Log.d("13janV1", "i ==> " + i);
-                        Log.d("13janV1", "date ==> " + date.toString());
-                        Log.d("13janV1", "Medicent ==> " + nameMedicineStrings[i]);
+                    if (Integer.parseInt(MorningStrings[i]) == 1) {
+                        arrayList.add(intTimeAlert[0]);
+                    }
 
-                        //คือการสั่งให้ Noti ทำงาน
+                    if (Integer.parseInt(LunchStrings[i]) == 1) {
+                        arrayList.add(intTimeAlert[1]);
+                    }
 
-                        setupDateForNoti(intTimeAlert[i1], nameMedicineStrings[i], timeUseStrings[i],
-                                dayStartStrings[i], monthStartStrings[i], yearStartStrings[i],
-                                MorningStrings[i], LunchStrings[i], DinnerStrings[i],
-                                SleepStrings[i], FoodStrings[i]);
+                    if (Integer.parseInt(DinnerStrings[i]) == 1) {
+                        arrayList.add(intTimeAlert[2]);
+                    }
+
+                    if (Integer.parseInt(SleepStrings[i]) == 1) {
+                        arrayList.add(intTimeAlert[3]);
+                    }
+
+                    Log.d("13janV1", "arrayList ==> " + arrayList.toString());
+
+                    for (int i1=0;i1<arrayList.size();i1++) {
+
+                        Date date = new Date(Integer.parseInt(yearStartStrings[i]),
+                                Integer.parseInt(monthStartStrings[i]) - 1,
+                                Integer.parseInt(dayStartStrings[i]), arrayList.get(i1), 0, 0);
 
 
-                    }   //if
+
+                        if (myCurrentDate.before(date) && b) {      //วันปัจจุบันมาก่อน วันนัด
+
+                            b = false;
+                            Log.d("13janV1", "i ==> " + i);
+                            Log.d("13janV1", "date ==> " + date.toString());
+                            Log.d("13janV1", "Medicent ==> " + nameMedicineStrings[i]);
+
+                            //คือการสั่งให้ Noti ทำงาน
+
+                            setupDateForNoti(arrayList.get(i1), nameMedicineStrings[i], timeUseStrings[i],
+                                    dayStartStrings[i], monthStartStrings[i], yearStartStrings[i],
+                                    MorningStrings[i], LunchStrings[i], DinnerStrings[i],
+                                    SleepStrings[i], FoodStrings[i]);
 
 
-                }   // for ใน
+                        }   //if
 
-            }   // for นอก
+                    }   // for
+
+                }   // for
+
+
 
 
         } catch (Exception e) {
