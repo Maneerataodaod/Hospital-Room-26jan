@@ -84,6 +84,14 @@ public class MenuActivity extends AppCompatActivity {
 
     } //Main Method
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        myNotification();
+
+    }
+
     private void addSonButtonController() {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -194,31 +202,44 @@ public class MenuActivity extends AppCompatActivity {
             Log.d("13janV1", "current Date ==> " + currentDate);
 
             Date myCurrentDate = new Date(calendar.get(Calendar.YEAR),
-                    calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+                    calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH),
+                    calendar.get(Calendar.HOUR_OF_DAY),
+                    calendar.get(Calendar.MINUTE),
+                    calendar.get(Calendar.SECOND));
 
             boolean b = true;
 
-            for (int i=0;i<MyDateStrings.length;i++) {
+            int[] intTimeAlert = new int[]{8,12,18,20};
 
-                Date date = new Date(Integer.parseInt(yearStartStrings[i]),
-                        Integer.parseInt(monthStartStrings[i]) -1,
-                        Integer.parseInt(dayStartStrings[i]));
+            for (int i1= 0;i1<intTimeAlert.length;i1++) {   // จะวนสี่รอบ
 
-                if (myCurrentDate.before(date) && b ) {
-                    b = false;
-                    Log.d("13janV1", "i ==> " + i);
-                    Log.d("13janV1", "date ==> " + date.toString());
-                    Log.d("13janV1", "Medicent ==> " + nameMedicineStrings[i]);
+                for (int i = 0; i < MyDateStrings.length; i++) {
 
-                    setupDateForNoti(nameMedicineStrings[i], timeUseStrings[i],
-                            dayStartStrings[i], monthStartStrings[i], yearStartStrings[i],
-                            MorningStrings[i], LunchStrings[i], DinnerStrings[i],
-                            SleepStrings[i], FoodStrings[i]);
+                    Date date = new Date(Integer.parseInt(yearStartStrings[i]),
+                            Integer.parseInt(monthStartStrings[i]) - 1,
+                            Integer.parseInt(dayStartStrings[i]), intTimeAlert[i1], 0, 0);
 
-                }   //if
+                    if (myCurrentDate.before(date) && b) {
+                        b = false;
+                        Log.d("13janV1", "i ==> " + i);
+                        Log.d("13janV1", "date ==> " + date.toString());
+                        Log.d("13janV1", "Medicent ==> " + nameMedicineStrings[i]);
+
+                        //คือการสั่งให้ Noti ทำงาน
+
+                        setupDateForNoti(intTimeAlert[i1], nameMedicineStrings[i], timeUseStrings[i],
+                                dayStartStrings[i], monthStartStrings[i], yearStartStrings[i],
+                                MorningStrings[i], LunchStrings[i], DinnerStrings[i],
+                                SleepStrings[i], FoodStrings[i]);
 
 
-            }   // for
+                    }   //if
+
+
+                }   // for ใน
+
+            }   // for นอก
 
 
         } catch (Exception e) {
@@ -227,7 +248,7 @@ public class MenuActivity extends AppCompatActivity {
 
     }   // myNotification
 
-    private void setupDateForNoti(String nameMediciene,
+    private void setupDateForNoti(int i, String nameMediciene,
                                   String timeUser,
                                   String day,
                                   String month,
@@ -242,7 +263,7 @@ public class MenuActivity extends AppCompatActivity {
         calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(day));
         calendar.set(Calendar.MONTH, (Integer.parseInt(month) -1));
         calendar.set(Calendar.YEAR, Integer.parseInt(year));
-        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.HOUR_OF_DAY, i);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
 
