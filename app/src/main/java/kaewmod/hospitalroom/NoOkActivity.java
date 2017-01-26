@@ -15,7 +15,7 @@ public class NoOkActivity extends AppCompatActivity {
 
     public void clickLiveWell (View view) {
         MyAlert myAlert = new MyAlert();
-        myAlert.myDialog(NoOkActivity.this, "How are you", "I'm fine");
+        myAlert.myDialog(NoOkActivity.this, "How are you ?", "I'm fine :D");
 
     }
     public void clickSymptoms (View view) {
