@@ -63,6 +63,7 @@ public class MenuActivity extends AppCompatActivity {
         //Setup Array
         setupArray();
 
+
         //Find Current Date
         findCurrentDate();
 
