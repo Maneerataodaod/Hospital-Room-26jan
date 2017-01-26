@@ -14,6 +14,7 @@ import org.json.JSONObject;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
@@ -81,6 +82,14 @@ public class SonService extends AppCompatActivity {
 
 
     }   // Main Method
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        myNotification();
+
+    }
 
     private void createListView() {
 
@@ -151,32 +160,69 @@ public class SonService extends AppCompatActivity {
             Calendar calendar = Calendar.getInstance();
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             String currentDate = dateFormat.format(calendar.getTime());
-            Log.d("13janV3", "current Date ==> " + currentDate);
+            Log.d("13janV1", "current Date ==> " + currentDate);
 
             Date myCurrentDate = new Date(calendar.get(Calendar.YEAR),
-                    calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+                    calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH),
+                    calendar.get(Calendar.HOUR_OF_DAY),
+                    calendar.get(Calendar.MINUTE),
+                    calendar.get(Calendar.SECOND));
 
             boolean b = true;
 
+            int[] intTimeAlert = new int[]{8,12,18,20};
+
+
+
             for (int i = 0; i < MyDateStrings.length; i++) {
 
-                Date date = new Date(Integer.parseInt(yearStartStrings[i]),
-                        Integer.parseInt(monthStartStrings[i]) - 1,
-                        Integer.parseInt(dayStartStrings[i]));
+                ArrayList<Integer> arrayList = new ArrayList<>();
 
-                if (myCurrentDate.before(date) && b) {
-                    b = false;
-                    Log.d("13janV1", "i ==> " + i);
-                    Log.d("13janV3", "date ที่เตือน ==> " + date.toString());
-                    Log.d("13janV1", "Medicent ==> " + nameMedicineStrings[i]);
+                if (Integer.parseInt(MorningStrings[i]) == 1) {
+                    arrayList.add(intTimeAlert[0]);
+                }
 
-                    setupDateForNoti(nameMedicineStrings[i], timeUseStrings[i],
-                            dayStartStrings[i], monthStartStrings[i], yearStartStrings[i],
-                            MorningStrings[i], LunchStrings[i], DinnerStrings[i],
-                            SleepStrings[i], FoodStrings[i]);
+                if (Integer.parseInt(LunchStrings[i]) == 1) {
+                    arrayList.add(intTimeAlert[1]);
+                }
 
-                }   //if
+                if (Integer.parseInt(DinnerStrings[i]) == 1) {
+                    arrayList.add(intTimeAlert[2]);
+                }
 
+                if (Integer.parseInt(SleepStrings[i]) == 1) {
+                    arrayList.add(intTimeAlert[3]);
+                }
+
+                Log.d("13janV1", "arrayList ==> " + arrayList.toString());
+
+                for (int i1=0;i1<arrayList.size();i1++) {
+
+                    Date date = new Date(Integer.parseInt(yearStartStrings[i]),
+                            Integer.parseInt(monthStartStrings[i]) - 1,
+                            Integer.parseInt(dayStartStrings[i]), arrayList.get(i1), 0, 0);
+
+
+
+                    if (myCurrentDate.before(date) && b) {      //วันปัจจุบันมาก่อน วันนัด
+
+                        b = false;
+                        Log.d("13janV1", "i ==> " + i);
+                        Log.d("13janV1", "date ==> " + date.toString());
+                        Log.d("13janV1", "Medicent ==> " + nameMedicineStrings[i]);
+
+                        //คือการสั่งให้ Noti ทำงาน
+
+                        setupDateForNoti(arrayList.get(i1), nameMedicineStrings[i], timeUseStrings[i],
+                                dayStartStrings[i], monthStartStrings[i], yearStartStrings[i],
+                                MorningStrings[i], LunchStrings[i], DinnerStrings[i],
+                                SleepStrings[i], FoodStrings[i]);
+
+
+                    }   //if
+
+                }   // for
 
             }   // for
 
@@ -187,7 +233,7 @@ public class SonService extends AppCompatActivity {
 
     }   // myNotification
 
-    private void setupDateForNoti(String nameMediciene,
+    private void setupDateForNoti(Integer integer, String nameMediciene,
                                   String timeUser,
                                   String day,
                                   String month,
@@ -202,7 +248,7 @@ public class SonService extends AppCompatActivity {
         calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(day));
         calendar.set(Calendar.MONTH, (Integer.parseInt(month) - 1));
         calendar.set(Calendar.YEAR, Integer.parseInt(year));
-        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.HOUR_OF_DAY, integer);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
 
