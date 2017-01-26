@@ -9,6 +9,6 @@ public class SickActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sick);
-    }
+    }   // Main Method
 
-}
+}   // Main Class

@@ -13,12 +13,13 @@ public class NoOkActivity extends AppCompatActivity {
         setContentView(R.layout.activity_no_ok);
     }
 
-    public void clickNoOkGosick (View view) {
-        startActivity(new Intent(NoOkActivity.this,SickActivity.class));
+    public void clickLiveWell (View view) {
+        MyAlert myAlert = new MyAlert();
+        myAlert.myDialog(NoOkActivity.this, "Title", "ข้อความ");
 
     }
-    public void clickHomeManuNook (View view) {
-        startActivity(new Intent(NoOkActivity.this,MenuActivity.class));
+    public void clickSymptoms (View view) {
+        startActivity(new Intent(NoOkActivity.this,SickActivity.class));
 
     }
 }
