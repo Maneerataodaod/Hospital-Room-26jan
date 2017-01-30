@@ -63,7 +63,7 @@
                     android:text="@string/Type"
                     android:id="@+id/textView81"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/h2" />
+                    android:textSize="@dimen/h1" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -79,7 +79,7 @@
                         android:id="@+id/radioButton"
                         android:checked="false"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="@dimen/h1"
+                        android:textSize="18sp"
                         android:layout_weight="0.37" />
 
                     <RadioButton
@@ -89,7 +89,7 @@
                         android:id="@+id/radioButton2"
                         android:checked="false"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="@dimen/h1" />
+                        android:textSize="18sp" />
                 </RadioGroup>
 
                 <LinearLayout
@@ -102,7 +102,7 @@
                         android:layout_height="45dp"
                         android:text="@string/NameSername"
                         android:id="@+id/textView"
-                        android:textSize="@dimen/h"
+                        android:textSize="@dimen/h9"
                         android:textColor="@color/colorPrimaryDark" />
 
                     <EditText
@@ -118,10 +118,10 @@
 
                     <TextView
                         android:layout_width="150dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/pass"
                         android:id="@+id/textView2"
-                        android:textSize="@dimen/h"
+                        android:textSize="@dimen/h9"
                         android:textColor="@color/colorPrimaryDark" />
 
                     <EditText
@@ -137,15 +137,15 @@
 
                     <TextView
                         android:layout_width="150dp"
-                        android:layout_height="60dp"
+                        android:layout_height="match_parent"
                         android:text="@string/pass2"
                         android:id="@+id/textView3"
-                        android:textSize="@dimen/h"
+                        android:textSize="@dimen/h9"
                         android:textColor="@color/colorPrimaryDark" />
 
                     <EditText
                         android:layout_width="200dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="53dp"
                         android:id="@+id/editText3" />
                 </LinearLayout>
 
@@ -157,10 +157,10 @@
 
                     <TextView
                         android:layout_width="130dp"
-                        android:layout_height="72dp"
+                        android:layout_height="63dp"
                         android:text="@string/Sex"
                         android:id="@+id/textView78"
-                        android:textSize="@dimen/h"
+                        android:textSize="@dimen/h9"
                         android:textColor="@color/colorPrimaryDark" />
 
                     <RadioGroup
@@ -176,9 +176,9 @@
                             android:text="@string/Boy"
                             android:id="@+id/radioButton3"
                             android:checked="false"
-                            android:textSize="@dimen/h"
-                            android:layout_weight="0.45"
-                            android:textColor="@color/colorPrimaryDark" />
+                            android:textSize="@dimen/h8"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_weight="0.73" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -186,8 +186,9 @@
                             android:text="@string/Girl"
                             android:id="@+id/radioButton4"
                             android:checked="false"
-                            android:textSize="@dimen/h"
-                            android:textColor="@color/colorPrimaryDark" />
+                            android:textSize="@dimen/h8"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_weight="0.81" />
                     </RadioGroup>
 
                 </LinearLayout>

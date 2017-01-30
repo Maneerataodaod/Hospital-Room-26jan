@@ -20,9 +20,6 @@ public class HomeActivity extends Activity {
         window.setFormat(PixelFormat.RGBA_8888);
     }
 
-    /**
-     * เปลี่ยนแปลงโดย มาสเตอร์
-     */
     Thread splashTread;
 
     @Override

@@ -306,7 +306,7 @@ public class MenuActivity extends AppCompatActivity {
         Log.d("22decV2", "Start ==> " + day);
 
         intent.putExtra("Login", loginStrings);
-        intent.putExtra("Mediciene", nameMediciene);  /// ใส่ที่เหลือ หน้าแสดงแจ้งเตือนการกินยา
+        intent.putExtra("Mediciene", nameMediciene);
         intent.putExtra("TimeUse", timeUser);
         intent.putExtra("Start", day );
         intent.putExtra("MonthYear", ("/" + month + "/" + year));
