@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Disleg"
                 android:id="@+id/textView71"
-                android:textSize="@dimen/h2"
+                android:textSize="@dimen/h5"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="normal|bold" />
 
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/linearLayout7"
-        android:background="@color/colorPrimary">
+        android:background="#a0ffffff">
 
         <LinearLayout
             android:orientation="horizontal"

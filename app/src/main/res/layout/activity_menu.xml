@@ -14,7 +14,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="#a5ffffff"
         android:layout_alignParentTop="true"></LinearLayout>
 
     <ImageView

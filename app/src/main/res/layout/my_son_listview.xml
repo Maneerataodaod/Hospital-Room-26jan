@@ -21,7 +21,7 @@
         android:orientation="vertical"
         android:layout_width="368dp"
         android:layout_height="484dp"
-        android:background="@color/colorPrimary"
+        android:background="#a5ffffff"
         android:layout_gravity="center_horizontal">
 
         <LinearLayout

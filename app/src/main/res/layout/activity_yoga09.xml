@@ -39,7 +39,7 @@
         android:id="@+id/textView14"
         android:textSize="@dimen/h5"
         android:textColor="@android:color/background_dark"
-        android:background="@color/colorPrimary"
+        android:background="#a5ffffff"
         android:layout_above="@+id/textView15"
         android:layout_centerHorizontal="true" />
 
@@ -51,7 +51,7 @@
         android:textColor="#000000"
         android:textSize="@dimen/h5"
         android:layout_gravity="center_horizontal"
-        android:background="#afffffff"
+        android:background="#a5ffffff"
         android:layout_below="@+id/imageView5"
         android:layout_centerHorizontal="true" />
 

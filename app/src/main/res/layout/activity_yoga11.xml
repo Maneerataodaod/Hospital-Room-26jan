@@ -32,6 +32,16 @@
         android:layout_alignParentTop="true"
         android:layout_height="50dp" />
 
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/imageView35"
+        android:background="@drawable/yoga_11"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/textView14"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
     <TextView
         android:text="@string/Yo11"
         android:layout_width="wrap_content"
@@ -39,7 +49,7 @@
         android:id="@+id/textView14"
         android:textSize="@dimen/h5"
         android:textColor="@android:color/background_dark"
-        android:background="@color/colorPrimary"
+        android:background="#a4ffffff"
         android:layout_above="@+id/textView15"
         android:layout_centerHorizontal="true" />
 
@@ -51,18 +61,8 @@
         android:textColor="#000000"
         android:textSize="@dimen/h5"
         android:layout_gravity="center_horizontal"
-        android:background="#afffffff"
+        android:background="#a4ffffff"
         android:layout_below="@+id/imageView5"
         android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:id="@+id/imageView35"
-        android:background="@drawable/yoga_11"
-        android:layout_gravity="center_horizontal"
-        android:layout_above="@+id/textView14"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp" />
 
 </RelativeLayout>

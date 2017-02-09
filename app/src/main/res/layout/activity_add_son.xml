@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/livSon"
-        android:background="@color/colorPrimary"
+        android:background="#a5ffffff"
         android:layout_below="@+id/imageView6" />
 
     <ImageView
