@@ -1,5 +1,6 @@
 package kaewmod.hospitalroom;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
@@ -8,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class YogaActivity extends AppCompatActivity {
 

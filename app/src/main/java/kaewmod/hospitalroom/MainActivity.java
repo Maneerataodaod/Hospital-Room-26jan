@@ -1,6 +1,7 @@
 package kaewmod.hospitalroom;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +22,8 @@ import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class MainActivity extends AppCompatActivity {
 
     //Explicit
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             maleRadioButton, femaleRadioButton;
     private static final String urlPHP = "http://swiftcodingthai.com/mod/mmmm.php";
     private String[] typeStrings = new String[]{"primary","Share"};
+
 
 
     @Override
@@ -176,7 +180,10 @@ public class MainActivity extends AppCompatActivity {
                 password1String.equals("") ||
                 password2String.equals("");
     }
-
-
+    //font
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
 
 }   // Main Class

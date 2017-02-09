@@ -2,6 +2,7 @@ package kaewmod.hospitalroom;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.content.Context;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class ShowNotification extends AppCompatActivity {
     //Explicit
@@ -159,6 +162,9 @@ public class ShowNotification extends AppCompatActivity {
 
 
     }
-
-
+    //Font
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
 } //Main Class

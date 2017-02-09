@@ -1,9 +1,12 @@
 package kaewmod.hospitalroom;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class HomeyogaActivity extends AppCompatActivity {
 
@@ -92,6 +95,10 @@ public class HomeyogaActivity extends AppCompatActivity {
         startActivity(new Intent(HomeyogaActivity.this, MenuActivity.class));
 
     }
-
+    //font
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
 
 }

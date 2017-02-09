@@ -22,6 +22,8 @@ import com.squareup.okhttp.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class AddSon extends AppCompatActivity {
 
     private ListView listView;
@@ -209,6 +211,10 @@ public class AddSon extends AppCompatActivity {
 
         }
     } //ListAllSon Class
-
+    //font
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
 
 } //Main Class

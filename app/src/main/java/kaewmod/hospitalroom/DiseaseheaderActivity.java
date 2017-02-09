@@ -1,9 +1,12 @@
 package kaewmod.hospitalroom;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DiseaseheaderActivity extends AppCompatActivity {
 
@@ -12,6 +15,13 @@ public class DiseaseheaderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diseaseheader);
     }
+    //Font
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
+
+
     public void clickMenuNurseHead (View view) {
         startActivity(new Intent(DiseaseheaderActivity.this,NurseActivity.class));
 

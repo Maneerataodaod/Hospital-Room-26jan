@@ -7,11 +7,15 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 /**
  * Created by masterUNG on 1/13/2017 AD.
  */
 
 public class SonAdapter extends BaseAdapter {
+
+
 
     //Explicit
     private Context context;
@@ -26,6 +30,8 @@ public class SonAdapter extends BaseAdapter {
     private String[] myDiner = new String[]{"No Diner", "Dinner"};
     private String[] mySleep = new String[]{"No Sleep", "Sleep"};
     private String[] myFood = new String[]{"Before Food", "After Food"};
+
+
 
     public SonAdapter(Context context,
                       String motherNameString,
@@ -48,6 +54,8 @@ public class SonAdapter extends BaseAdapter {
         this.sleepStrings = sleepStrings;
         this.foodStrings = foodStrings;
     }
+
+
 
     @Override
     public int getCount() {
@@ -96,4 +104,6 @@ public class SonAdapter extends BaseAdapter {
 
         return view1;
     }
+
+
 }   // Main Class

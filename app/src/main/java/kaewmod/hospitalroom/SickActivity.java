@@ -1,5 +1,6 @@
 package kaewmod.hospitalroom;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,8 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SickActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,6 +33,8 @@ public class SickActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sick);
+
+
 
         stringArrayList = new ArrayList<String>();
 
@@ -153,5 +158,11 @@ public class SickActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("26janV1", "result ==> " + resultString);
 
     }   // onClick
+
+    //Font
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
 
 }   // Main Class

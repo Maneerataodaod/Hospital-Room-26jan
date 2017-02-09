@@ -20,6 +20,8 @@ import com.squareup.okhttp.Response;
 
 import java.util.Calendar;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class DrugsaveActivity extends AppCompatActivity {
 
     //Explicit
@@ -271,5 +273,12 @@ public class DrugsaveActivity extends AppCompatActivity {
 
 
     }   // bindWidget
+
+    //Font
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
+
 
 }   // Main Class

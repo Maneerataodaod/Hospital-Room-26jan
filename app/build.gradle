@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/', 'src/main/assets/fonts', 'src/assets/', 'src/main/assets/font']
+        }
+    }
 }
 
 dependencies {
@@ -26,4 +31,6 @@ dependencies {
     compile 'com.android.support:design:24.1.1'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    //font
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
 }

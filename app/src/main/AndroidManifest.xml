@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".Myfont"
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
@@ -54,7 +55,6 @@
         <activity android:name=".Dishead5Activity" />
         <activity android:name=".Disleg1Activity" />
         <activity android:name=".Disleg2Activity" />
-        <activity android:name=".listviewActivity" />
         <activity android:name=".AddSon" />
         <activity android:name=".SonService" />
         <activity android:name=".ShowNotification"></activity>

@@ -22,6 +22,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class MenuActivity extends AppCompatActivity {
 
 
@@ -42,8 +44,6 @@ public class MenuActivity extends AppCompatActivity {
 
     private ArrayList<String> nameMedicine2, timeUse2, dayStart2, monthStart2, yearStart2,
             Morning2, Lunch2, Dinner2, Sleep2, Food2;
-
-
 
 
     @Override

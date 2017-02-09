@@ -16,7 +16,6 @@
         android:background="@drawable/homme1"
         android:layout_gravity="right"
         android:onClick="clickHomeYogaBack"
-        android:layout_alignBottom="@+id/linearLayout22"
         android:layout_marginBottom="335dp"
         android:layout_alignParentTop="true"
         android:layout_height="50dp" />

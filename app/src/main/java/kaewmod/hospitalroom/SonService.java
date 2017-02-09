@@ -19,6 +19,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class SonService extends AppCompatActivity {
 
     //Explicit
@@ -281,5 +283,11 @@ public class SonService extends AppCompatActivity {
 
 
     } //setupDate
+
+    //Font
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
 
 }   // Main Class
