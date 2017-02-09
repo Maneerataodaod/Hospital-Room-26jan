@@ -30,6 +30,13 @@ public class YogaActivity extends AppCompatActivity {
 
     }//Main Methon
 
+    //Font
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
+
+
     public void clickYoga(View view) {
         startActivity(new Intent(YogaActivity.this, HomeyogaActivity.class));
         finish();

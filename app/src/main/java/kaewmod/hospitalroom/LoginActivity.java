@@ -179,5 +179,10 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
     }
 
+    //Font
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
 
 } //main Class
