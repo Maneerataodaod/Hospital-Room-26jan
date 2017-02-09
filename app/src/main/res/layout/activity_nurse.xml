@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView11"
-        android:textSize="@dimen/h2"
+        android:textSize="@dimen/h5"
         android:textColorLink="@color/colorAccent"
         android:textColor="#5e53fe"
         android:layout_weight="1"

@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/DisBody"
                 android:id="@+id/textView61"
-                android:textSize="@dimen/h2"
+                android:textSize="@dimen/h5"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_gravity="center_vertical"
                 android:textStyle="normal|bold" />

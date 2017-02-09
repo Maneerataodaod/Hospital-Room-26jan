@@ -13,7 +13,7 @@ public class Myfont extends Application {
 
     private void initFont() {
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("bangnanew.ttf")
+                .setDefaultFontPath("athitilight.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );

@@ -156,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView53"
                 android:layout_weight="1"
-                android:textSize="@dimen/h2"
+                android:textSize="@dimen/h5"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark" />
 
@@ -209,7 +209,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/textView54"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="@dimen/h2"
+                        android:textSize="@dimen/h5"
                         android:textStyle="normal|bold" />
                 </LinearLayout>
 
