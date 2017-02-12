@@ -33,4 +33,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
     //font
     compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    //zoom
+    compile 'com.github.chrisbanes:PhotoView:1.2.6'
 }
