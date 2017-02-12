@@ -13,43 +13,6 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout7">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <ImageView
-                android:layout_width="41dp"
-                android:layout_height="42dp"
-                android:id="@+id/imageView52"
-                android:background="@drawable/homme1"
-                android:onClick="clickMenuNurseLeg"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="13dp"
-                android:layout_marginEnd="13dp"
-                android:layout_weight="0.19" />
-
-            <TextView
-                android:layout_width="272dp"
-                android:layout_height="wrap_content"
-                android:text="@string/Disleg"
-                android:id="@+id/textView71"
-                android:textSize="@dimen/h5"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="normal|bold" />
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/linearLayout7"
         android:background="#a0ffffff">
@@ -112,5 +75,44 @@
         android:layout_below="@+id/linearLayout7"
         android:layout_centerHorizontal="true"
         android:layout_height="120dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="41dp"
+                android:layout_height="42dp"
+                android:id="@+id/imageView52"
+                android:background="@drawable/homme1"
+                android:onClick="clickMenuNurseLeg"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_weight="0.19" />
+
+            <TextView
+                android:layout_width="272dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Disleg"
+                android:id="@+id/textView71"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="normal|bold" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
