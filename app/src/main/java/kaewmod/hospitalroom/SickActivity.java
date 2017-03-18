@@ -15,6 +15,9 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -29,11 +32,11 @@ public class SickActivity extends AppCompatActivity implements View.OnClickListe
     private String resultString = null;
     private ArrayList<String> stringArrayList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sick);
-
 
 
         stringArrayList = new ArrayList<String>();
@@ -43,6 +46,7 @@ public class SickActivity extends AppCompatActivity implements View.OnClickListe
         imgageController();
 
     }   // Main Method
+
 
     public void clickSaveSick(View view) {
         MyAlert myAlert = new MyAlert();
@@ -153,12 +157,15 @@ public class SickActivity extends AppCompatActivity implements View.OnClickListe
                 stringArrayList.add(getResources().getString(R.string.Sick99));
                 break;
         }
+            resultString = stringArrayList.toString();
 
-        resultString = stringArrayList.toString();
-        Log.d("26janV1", "result ==> " + resultString);
+        //ลบ[] ออกได้ !!!!!!!!
+            resultString = resultString.substring(1, resultString.length() - 1);
 
-    }   // onClick
+            Log.d("26janV1", "result ==> " + resultString);
 
+        }   // onClick
+    
     //Font
     @Override
     protected void attachBaseContext(Context base){

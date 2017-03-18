@@ -16,8 +16,6 @@ public class NoOkActivity extends AppCompatActivity {
         setContentView(R.layout.activity_no_ok);
     }
 
-
-
     public void clickLiveWell (View view) {
         MyAlert myAlert = new MyAlert();
         myAlert.myDialog(NoOkActivity.this, "How are you ?", "I'm fine");

@@ -59,6 +59,7 @@
         <activity android:name=".SonService" />
         <activity android:name=".ShowNotification"></activity>
 
+
         <receiver android:name=".MyReceive" android:process=":remote"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data
